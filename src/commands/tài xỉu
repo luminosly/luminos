@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tai Xiu Oniichan</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background: #ffeef8; }
+        .dice-container { font-size: 50px; margin: 20px; }
+        button { padding: 10px 20px; font-size: 20px; cursor: pointer; background: #ff8da1; border: none; color: white; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🎲 Game Tài Xỉu của Oniichan 🎲</h1>
+    <div class="dice-container" id="result">Hãy nhấn nút để lắc nhé!</div>
+    <button onclick="play()">Lắc Xúc Xắc!</button>
+    <h2 id="status"></h2>
+
+    <script>
+        function play() {
+            let d1 = Math.floor(Math.random() * 6) + 1;
+            let d2 = Math.floor(Math.random() * 6) + 1;
+            let d3 = Math.floor(Math.random() * 6) + 1;
+            let sum = d1 + d2 + d3;
+            let win = sum >= 11 ? "TÀI" : "XỈU";
+            
+            document.getElementById('result').innerText = `${d1} - ${d2} - ${d3} = ${sum}`;
+            document.getElementById('status').innerText = "Kết quả là: " + win + " ✨";
+        }
+    </script>
+</body>
+</html>
