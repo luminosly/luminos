@@ -1,0 +1,34 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+    <title>Tai Xiu Oniichan</title>\par
+    <style>\par
+        body \{ text-align: center; font-family: 'Arial', sans-serif; background: #ffeef8; \}\par
+        .dice-container \{ font-size: 50px; margin: 20px; \}\par
+        button \{ padding: 10px 20px; font-size: 20px; cursor: pointer; background: #ff8da1; border: none; color: white; border-radius: 10px; \}\par
+    </style>\par
+</head>\par
+<body>\par
+    <h1>\u-10180?\u-8270? Game T\'e0i X\u7881?u c\u7911?a Oniichan \u-10180?\u-8270?</h1>\par
+    <div class="dice-container" id="result">H\'e3y nh\u7845?n n\'fat \u273?\u7875? l\u7855?c nh\'e9!</div>\par
+    <button onclick="play()">L\u7855?c X\'fac X\u7855?c!</button>\par
+    <h2 id="status"></h2>\par
+\par
+    <script>\par
+        function play() \{\par
+            let d1 = Math.floor(Math.random() * 6) + 1;\par
+            let d2 = Math.floor(Math.random() * 6) + 1;\par
+            let d3 = Math.floor(Math.random() * 6) + 1;\par
+            let sum = d1 + d2 + d3;\par
+            let win = sum >= 11 ? "T\'c0I" : "X\u7880?U";\par
+            \par
+            document.getElementById('result').innerText = `$\{d1\} - $\{d2\} - $\{d3\} = $\{sum\}`;\par
+            document.getElementById('status').innerText = "K\u7871?t qu\u7843? l\'e0: " + win + " \u10024?";\par
+        \}\par
+    </script>\par
+</body>\par
+</html>\par
+}
